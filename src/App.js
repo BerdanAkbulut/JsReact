@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState,useContext } from "react";
+import { Container } from "semantic-ui-react";
+import { CounterContext } from "./CounterContext";
+import { FComponent } from "./FComponent";
 
-function App() {
+const App = () => {
+  const [counter,setCounter] = useState(0)
+  //const {counter,setCounter} = useContext(CounterContext)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App ">
+      <Container>
+       <h1>{counter}</h1>
+
+       <button onClick={()=> {setCounter(counter+1)}}>Arttır </button>
+       <hr></hr>
+       <button onClick={()=> {setCounter(counter-1)}}>Azalt </button>
+          
+          <CounterContext.Provider value={{counter,setCounter}}>
+            <FComponent/>
+          </CounterContext.Provider>
+      </Container>
     </div>
   );
-}
+};
 
 export default App;
