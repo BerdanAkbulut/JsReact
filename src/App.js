@@ -1,7 +1,8 @@
-import React, { useState,useContext } from "react";
+import React, { useState,useContext, useReducer } from "react";
 import { Container } from "semantic-ui-react";
 import { CounterContext } from "./CounterContext";
 import { FComponent } from "./FComponent";
+import ReducerOrnek from "./ReducerOrnek"
 
 const App = () => {
   const [counter,setCounter] = useState(0)
@@ -9,6 +10,9 @@ const App = () => {
   return (
     <div className="App ">
       <Container>
+
+        <ReducerOrnek/>
+
        <h1>{counter}</h1>
 
        <button onClick={()=> {setCounter(counter+1)}}>Arttır </button>
@@ -17,8 +21,12 @@ const App = () => {
           
           <CounterContext.Provider value={{counter,setCounter}}>
             <FComponent/>
+
+          
           </CounterContext.Provider>
       </Container>
+
+      
     </div>
   );
 };
