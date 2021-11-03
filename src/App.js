@@ -3,13 +3,14 @@ import { Container } from "semantic-ui-react";
 import { CounterContext } from "./CounterContext";
 import { FComponent } from "./FComponent";
 import ReducerOrnek from "./ReducerOrnek"
+import AddContact from "./AddContact";
 
 const App = () => {
   const [counter,setCounter] = useState(0)
   //const {counter,setCounter} = useContext(CounterContext)
   return (
     <div className="App ">
-      <Container>
+      {/* <Container>
 
         <ReducerOrnek/>
 
@@ -24,8 +25,13 @@ const App = () => {
 
           
           </CounterContext.Provider>
-      </Container>
+      </Container> */}
 
+      <Container>
+        
+        <AddContact/>
+
+      </Container>
       
     </div>
   );
