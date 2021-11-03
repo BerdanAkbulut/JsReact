@@ -1,3 +1,3 @@
 useReducer , useContext 
-<img src="![image](https://user-images.githubusercontent.com/61564008/140076570-8bdbde77-eb8a-4b9e-bd18-647092c5b944.png)
-"/>
+
+![gt](https://user-images.githubusercontent.com/61564008/140076817-5a070188-4abf-4f0d-8d11-2ae67cadf831.png)
